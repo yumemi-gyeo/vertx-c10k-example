@@ -46,6 +46,9 @@ public class ServerVerticle extends AbstractVerticle {
 
 	@Override
 	public void start(Promise<Void> startPromise) throws Exception {
+		System.out.println("SERVER_HOST: " + SERVER_HOST);
+		System.out.println("SERVER_PORT: " + SERVER_PORT);
+
 		HttpServerOptions options = new HttpServerOptions();
 		options
 			.setPort(SERVER_PORT)
