@@ -23,8 +23,8 @@ import io.vertx.ext.web.handler.BodyHandler;
 
 public class ServerVerticle extends AbstractVerticle {
 
-	public static final int SERVER_PORT = 8080;
-	public static final String SERVER_HOST = "localhost";
+	public static final int SERVER_PORT = Integer.parseInt(System.getProperty("SERVER_PORT", "8080"));
+	public static final String SERVER_HOST = System.getProperty("SERVER_HOST", "localhost");
 	public final Random RANDOM = new Random();
 
 	public static final int n4K = 4 * 1024;
